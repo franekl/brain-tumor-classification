@@ -13,7 +13,7 @@ def get_image_data(path, width, height):
 def load_dataset(IMG_WIDTH=225, IMG_HEIGHT=225):
     base_path = "data"
     images, labels = [], []
-    label_names = os.listdir(base_path)
+    label_names = os.listdir(base_path) # one folder for each class
     label_map = {name: idx for idx, name in enumerate(label_names)}
 
     for label_name, label_idx in label_map.items():
